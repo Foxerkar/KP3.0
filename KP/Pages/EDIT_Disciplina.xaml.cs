@@ -16,16 +16,26 @@ using System.Windows.Shapes;
 namespace KP.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AnalizControl.xaml
+    /// Логика взаимодействия для EDIT_Disciplina.xaml
     /// </summary>
-    public partial class AnalizControl : Page
+    public partial class EDIT_Disciplina : Page
     {
         public bool IsEditor { get; set; }
-        public AnalizControl(bool isEditor)
+        public EDIT_Disciplina(bool isEditor)
         {
             InitializeComponent();
             IsEditor = isEditor;
             DataContext = this;
+        }
+
+        private void AddDisciplina_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DeleteDiciplina_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

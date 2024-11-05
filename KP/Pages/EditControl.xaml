@@ -9,6 +9,23 @@
       Title="EditControl">
 
     <Grid>
-        
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <Button Content="Расписание" Margin="5" Click="RaspisanieManagment"/>
+            <Button Content="Группы" Margin="5" Click="GruppaManagment"/>
+            <Button Content="Преподаватели" Margin="5" Click="EDIT_Prepodavateli" x:Name="EDIT_Prepodavateli_Button"/>
+            <Button Content="Аудитории" Margin="5" Click="EDIT_Auditorii" x:Name="EDIT_Auditorii_Button"/>
+            <Button Content="Дисциплины" Margin="5" Click="EDIT_Disciplina" x:Name="EDIT_Disciplina_Button"/>
+            <Button Content="Анализ" Margin="5" Click="AnalizManagment"/>
+            <Button Content="Пользователи" Margin="5" Click="EDIT_users" x:Name="PolzovateliManagment_Button"/>
+        </StackPanel>
+
+        <Frame x:Name="Redaktor" Grid.Column="1" Margin="0,0,0,0"/>
     </Grid>
 </Page>

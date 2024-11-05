@@ -10,14 +10,15 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            
+            <ColumnDefinition Width="auto"/>
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
 
-        <StackPanel>
+        <StackPanel Visibility="{Binding IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}">
 
-            <TextBox x:Name="Name" Text="Имя" Width="180" Margin="0,10,0,10"/>
+            <TextBox x:Name="Name" Text="Имя" Width="180" Margin="10"/>
             <TextBox x:Name="FName" Text="Фамилия" Width="180" Margin="0,0,0,10"/>
             <TextBox x:Name="Otchestvo" Text="Отчество" Width="180" Margin="0,0,0,10"/>
             <TextBox x:Name="Specialnost" Text="Специальность" Width="180" Margin="0,0,0,10"/>
@@ -31,11 +32,11 @@
         <ListView x:Name="PrepodListView" ItemsSource="{Binding Prepodi}" Grid.Column="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="20" DisplayMemberBinding="{Binding ID_Prepod}" />
+                    <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ID_Prepod}" />
                     <GridViewColumn Header="Имя" Width="100" DisplayMemberBinding="{Binding Name}" />
                     <GridViewColumn Header="Фамилия" Width="100" DisplayMemberBinding="{Binding FName}" />
                     <GridViewColumn Header="Отчество" Width="100" DisplayMemberBinding="{Binding Otchestvo}" />
-                    <GridViewColumn Header="Специальность" Width="300" DisplayMemberBinding="{Binding Specialnost}" />
+                    <GridViewColumn Header="Специальность" Width="290" DisplayMemberBinding="{Binding Specialnost}" />
                 </GridView>
             </ListView.View>
         </ListView>

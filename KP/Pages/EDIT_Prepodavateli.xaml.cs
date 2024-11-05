@@ -26,11 +26,13 @@ namespace KP.Pages
     {
         private const string ConnectionString = "Data Source=Ucheb_Raspisnie.db;Version=3;";
         public ObservableCollection<Prepodavateli> Prepodi { get; set; }
-        public EDIT_Prepodavateli()
+        public bool IsEditor { get; set; }
+        public EDIT_Prepodavateli(bool isEditor)
         {
             InitializeComponent();
             Prepodi = new ObservableCollection<Prepodavateli>();
             DataContext = this;
+            IsEditor = isEditor;
             LoadPrepodi();
         }
 

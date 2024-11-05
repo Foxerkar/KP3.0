@@ -1,8 +1,11 @@
 ﻿using KP.DataBase;
+using System;
 using System.Collections.ObjectModel;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace KP.Pages
 {
@@ -10,15 +13,18 @@ namespace KP.Pages
     {
         private const string ConnectionString = "Data Source=Ucheb_Raspisnie.db;Version=3;";
         public ObservableCollection<Gruppa> Groups { get; set; }
+        public bool IsEditor { get; set; }
 
-        public GruppaControl(bool isGuest)
+        public GruppaControl(bool isEditor)
         {
             InitializeComponent();
+            IsEditor = isEditor;
             Groups = new ObservableCollection<Gruppa>();
             GroupsListView.ItemsSource = Groups;
-
+            DataContext = this;
             LoadData();
         }
+
 
         private void LoadData()
         {
