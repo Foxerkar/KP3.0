@@ -79,41 +79,50 @@ namespace KP
         private void RaspisanieManagment(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new RaspisanieControl();
+            TextMenu.Text = "Расписание";
         }
 
         private void AnalizManagment(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new AnalizControl();
+            MainContent.Content = new AnalizControl(false);
+            TextMenu.Text = "Анализ";
         }
 
         private void GruppaManagment(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new GruppaControl(false);
+            TextMenu.Text = "Группы";
         }
 
         private void EditManagment(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new EditControl();
+            TextMenu.Text = "Редактор";
         }
 
         private void LoadMenu(object sender, RoutedEventArgs e)
         {
             MainContent.Content = new LoadMenu();
+            TextMenu.Text = "Главное меню";
         }
 
-        private void EDIT_users(object sender, RoutedEventArgs e)
-        {
-            MainContent.Content = new EDIT_users();
-        }
 
         private void EDIT_Prepodavateli(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new EDIT_Prepodavateli();
+            MainContent.Content = new EDIT_Prepodavateli(false);
+            TextMenu.Text = "Преподаватели";
         }
 
         private void EDIT_Auditorii(object sender, RoutedEventArgs e)
         {
-            MainContent.Content = new EDIT_Auditorii();
+            MainContent.Content = new EDIT_Auditorii(false);
+            TextMenu.Text = "Аудитории";
+        }
+
+        private void EDIT_Disciplina(object sender, RoutedEventArgs e)
+        {
+            MainContent.Content = new EDIT_Disciplina(false);
+            TextMenu.Text = "Дисциплины";
         }
     }
 }

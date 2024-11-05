@@ -9,23 +9,30 @@
       Title="GruppaControl">
 
     <Grid>
-        <StackPanel Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
 
-            <TextBox x:Name="NomGrupTextBox" Text="Название группы" Width="300" Margin="0,0,0,10"/>
-            <TextBox x:Name="SpecialnostTextBox" Text="Специальность" Width="300" Margin="0,0,0,10"/>
+        </Grid.ColumnDefinitions>
 
-            <Button Content="Добавить группу" Click="AddGroup_Click" Width="120" Margin="0,0,0,10"/>
-            <Button Content="Удалить группу" Click="DeleteGroup_Click" Width="120" Margin="0,0,0,10"/>
+        <StackPanel Margin="10" Grid.Column="0" Visibility="{Binding IsEditor, Converter={StaticResource BooleanToVisibilityConverter}}">
 
-            <ListView x:Name="GroupsListView" SelectionChanged="GroupsListView_SelectionChanged">
-                <ListView.View>
+            <TextBox x:Name="NomGrupTextBox" Text="Название группы" Width="180" Margin="0,0,0,10"/>
+            <TextBox x:Name="SpecialnostTextBox" Text="Специальность" Width="180" Margin="0,0,0,10"/>
+
+            <Button Content="Добавить" Click="AddGroup_Click" Width="120" Height="30" Margin="0,0,0,10"/>
+            <Button Content="Удалить" Click="DeleteGroup_Click" Width="120" Height="30" Margin="0,0,0,10"/>
+        </StackPanel>
+        
+            <ListView x:Name="GroupsListView" SelectionChanged="GroupsListView_SelectionChanged" Grid.Column="1" >
+                <ListView.View >
                     <GridView>
-                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID_gruppa}" Width="50"/>
+                        <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID_gruppa}" Width="30"/>
                         <GridViewColumn Header="Название группы" DisplayMemberBinding="{Binding NomGrup}" Width="150"/>
                         <GridViewColumn Header="Специальность" DisplayMemberBinding="{Binding Specialnost}" Width="350"/>
                     </GridView>
                 </ListView.View>
             </ListView>
-        </StackPanel>
+        
     </Grid>
 </Page>

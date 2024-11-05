@@ -113,6 +113,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\EDIT_Disciplina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\EDIT_Prepodavateli.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -143,6 +147,9 @@
     </Compile>
     <Compile Include="Pages\EDIT_Auditorii.xaml.cs">
       <DependentUpon>EDIT_Auditorii.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EDIT_Disciplina.xaml.cs">
+      <DependentUpon>EDIT_Disciplina.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\EDIT_Prepodavateli.xaml.cs">
       <DependentUpon>EDIT_Prepodavateli.xaml</DependentUpon>

@@ -11,26 +11,26 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        
+
         <DockPanel x:Name="SidePanel" Background="LightGray" Width="150" VerticalAlignment="Stretch"
                RenderTransformOrigin="0.5,0.5" >
-        <StackPanel>
+            <StackPanel>
 
                 <Button Content="Главное меню" Margin="5" Click="LoadMenu"/>
                 <Button Content="Расписание" Margin="5" Click="RaspisanieManagment"/>
-                <Button Content="Группа" Margin="5" Click="GruppaManagment"/>
+                <Button Content="Группы" Margin="5" Click="GruppaManagment"/>
                 <Button Content="Преподаватели" Margin="5" Click="EDIT_Prepodavateli" x:Name="EDIT_Prepodavateli_Button"/>
                 <Button Content="Аудитории" Margin="5" Click="EDIT_Auditorii" x:Name="EDIT_Auditorii_Button"/>
+                <Button Content="Дисциплины" Margin="5" Click="EDIT_Disciplina" x:Name="EDIT_Disciplina_Button"/>
 
                 <Button Content="Анализ" Margin="5" Click="AnalizManagment"/>
                 <Button Content="Редактор" Margin="5" Click="EditManagment" x:Name="RaspicsanieManagment_Button"/>
-                <Button Content="Пользователи" Margin="5" Click="EDIT_users" x:Name="PolzovateliManagment_Button"/>
                 <Button Content="Выйти" Margin="5" Click="ExitButton_Click" />
 
             </StackPanel>
-        
-    </DockPanel>
 
+        </DockPanel>
+        <TextBlock x:Name="TextMenu" VerticalAlignment="Top" HorizontalAlignment="Center" Text="Главное меню" Grid.Column="1" Margin="10" FontSize="16" FontWeight="DemiBold"/>
         <Button x:Name="MenuButton" Content="☰" Width="25" Height="25" Click="MenuButton_Click" Margin="0,10,0,0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Left"/>
         <Frame x:Name="MainContent" Grid.Column="1" Margin="10,35,10,10"/>
 
