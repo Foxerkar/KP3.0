@@ -29,8 +29,8 @@
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ID_Disciplina}" />
-                    <GridViewColumn Header="Номер Аудитории" Width="200" DisplayMemberBinding="{Binding Nazvanie}" />
-                    <GridViewColumn Header="Тип Аудитории" Width="200" DisplayMemberBinding="{Binding Opisanie}" />
+                    <GridViewColumn Header="Название дисциплины" Width="200" DisplayMemberBinding="{Binding Nazvanie}" />
+                    <GridViewColumn Header="Описание дисциплины" Width="200" DisplayMemberBinding="{Binding Opisanie}" />
                 </GridView>
             </ListView.View>
         </ListView>

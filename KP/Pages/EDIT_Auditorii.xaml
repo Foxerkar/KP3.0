@@ -28,7 +28,7 @@
         <ListView x:Name="PrepodListView" ItemsSource="{Binding Auditorii}" Grid.Column="1">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="ID" Width="20" DisplayMemberBinding="{Binding ID_Auditor}" />
+                    <GridViewColumn Header="ID" Width="30" DisplayMemberBinding="{Binding ID_Auditor}" />
                     <GridViewColumn Header="Номер Аудитории" Width="200" DisplayMemberBinding="{Binding NomAud}" />
                     <GridViewColumn Header="Тип Аудитории" Width="200" DisplayMemberBinding="{Binding Type}" />
                 </GridView>
